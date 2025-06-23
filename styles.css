@@ -1,0 +1,107 @@
+/* Основные стили (как ранее) */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ff4c4c;
+}
+
+.info-text {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+.recommendations {
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  padding-left: 20px;
+  color: #ccc;
+  font-size: 1.1rem;
+}
+
+.recommendations li {
+  margin-bottom: 10px;
+}
+
+.subscribe-text {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #eee;
+}
+
+.telegram-link {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #0088cc;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.telegram-link:hover,
+.telegram-link:focus {
+  background-color: #006699;
+}
+
+/* Адаптивность для экранов до 768px (планшеты и телефоны) */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  .info-text,
+  .recommendations,
+  .subscribe-text {
+    font-size: 1rem;
+    max-width: 90%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .recommendations {
+    padding-left: 15px;
+  }
+  body {
+    padding: 15px 10px;
+  }
+  .telegram-link {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
+/* Дополнительная адаптация для очень маленьких экранов (до 400px) */
+@media (max-width: 400px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  .telegram-link {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
