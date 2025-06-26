@@ -3,25 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Внимание! Безопасность аккаунта</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Тест: Знания о мошенничестве</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <img src="security-warning.png" alt="Предупреждение о безопасности" width="400"/>
-  <h1>Ваш аккаунт взломан.</h1>
-  <p class="subscribe-text">
-    Для регулярных советов по кибербезопасности и актуальных предупреждений подпишитесь на наш Telegram-канал:
-  </p>
-  <a href="https://t.me/bezopasnyvybor" target="_blank" rel="noopener" class="telegram-link">Подписаться на Telegram</a>
-  <p class="info-text">
-    Если вы видите это сообщение — это часть профилактической проверки безопасности. Мы хотим помочь вам защитить ваши данные и избежать реальных угроз взлома.
-  </p>
-  <ul class="recommendations">
-    <li>Никогда не сообщайте свои пароли и данные банковских карт.</li>
-    <li>Используйте сложные пароли и включайте двухфакторную аутентификацию.</li>
-    <li>Будьте внимательны к подозрительным сообщениям и ссылкам.</li>
-  </ul>
-  
+  <div class="container">
+    <h1>Тест: Проверь свои знания о мошенничестве</h1>
+    <form id="quizForm">
+      <div class="question">
+        <h3>1. Что делать, если вам звонят и просят назвать код из SMS?</h3>
+        <label><input type="radio" name="q1" value="b" /> Не сообщать код никому</label>
+        <label><input type="radio" name="q1" value="a" /> Назвать код</label>
+        <label><input type="radio" name="q1" value="c" /> Позвонить обратно по номеру из SMS</label>
+      </div>
+      <div class="question">
+        <h3>2. Как мошенники чаще всего получают доступ к вашим банковским данным?</h3>
+        <label><input type="radio" name="q2" value="a" /> Через звонки и смс с просьбой назвать код</label>
+        <label><input type="radio" name="q2" value="b" /> Через официальные сайты банков</label>
+        <label><input type="radio" name="q2" value="c" /> Через личный визит в банк</label>
+      </div>
+      <div class="question">
+        <h3>3. Что делать, если вы получили сообщение с просьбой перевести деньги на "безопасный счёт"?</h3>
+        <label><input type="radio" name="q3" value="b" /> Проверить информацию через официальный банк</label>
+        <label><input type="radio" name="q3" value="a" /> Перевести деньги сразу</label>
+        <label><input type="radio" name="q3" value="c" /> Игнорировать и не отвечать</label>
+      </div>
+      <div class="question">
+        <h3>4. Какая из схем мошенничества распространена в Telegram?</h3>
+        <label><input type="radio" name="q4" value="a" /> Взлом аккаунта и просьба перевести деньги знакомым</label>
+        <label><input type="radio" name="q4" value="b" /> Отправка рекламных сообщений</label>
+        <label><input type="radio" name="q4" value="c" /> Бесплатное распространение программ</label>
+      </div>
+      <button type="submit">Проверить ответы</button>
+    </form>
+
+    <div id="result" class="result" style="display:none;"></div>
+
+    <div class="subscribe" style="display:none;" id="subscribeBlock">
+      <p>Хотите быть в курсе самых свежих схем мошенничества и способов защиты?<br />
+      Подписывайтесь на наш Telegram-канал, где мы регулярно публикуем полезные советы и предупреждения!</p>
+      <button id="subscribeBtn">Подписаться на Telegram</button>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
